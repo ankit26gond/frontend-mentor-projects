@@ -1,2 +1,2 @@
-# frontend-mentor-projects
+# Frontend Mentor Projects
 All Frontent Mentor Projects
