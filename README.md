@@ -1,5 +1,5 @@
 # Frontend Mentor Projects
-All Frontent Mentor learning path projects
+Frontend Mentor Projects.
 
 ## Getting started on Frontend Mentor
 
