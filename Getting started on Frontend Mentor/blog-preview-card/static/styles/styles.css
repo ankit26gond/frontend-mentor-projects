@@ -1,0 +1,130 @@
+@font-face {
+  font-family: 'Figtree';
+  src: url(../../assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+:root {
+  --neutral-color: hsl(0, 0%, 100%);
+  --primary-color: hsl(0, 0%, 7%);
+  --secondary-color: hsl(0, 0%, 50%);
+
+  --primary-bg-color: hsl(47, 88%, 63%);
+
+  --padding-main: 1rem;
+  --box-shadow-main: 0.7em;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Figtree', sans-serif;
+  line-height: 1.4;
+  font-weight: 500;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-color);
+}
+
+main {
+  background-color: var(--neutral-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% - var(--box-shadow-main) / 2), -50%);
+  width: 375px;
+  border: 1px solid var(--primary-color);
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow-main) var(--box-shadow-main) 0 0 var(--primary-color);
+  padding: 1.5em;
+  transition: 0.2s ease;
+}
+
+div[role=figure] {
+  margin-block-end: 0.3em;
+}
+
+div[role=figure] img {
+  width: 100%;
+  border-radius: 0.7rem;
+}
+
+div[role=none] {
+  font-size: 0.8em;
+}
+
+.field {
+  background-color: var(--primary-bg-color);
+  display: inline-block;
+  padding: 0.4em 1em;
+  border-radius: 5px;
+  font-weight: 800;
+  margin-block-end: 0;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  column-gap: 1em;
+  font-weight: 800;
+}
+
+article {
+  font-size: 1em;
+  color: var(--secondary-color);
+}
+
+h1 {
+  font-weight: 800;
+}
+
+h1 a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+@media (pointer: fine) {
+  h1 a:hover {
+    color: var(--primary-bg-color);
+  }
+
+  .author {
+    cursor: pointer;
+  }
+
+  main:hover,
+  main:focus-within {
+    transform: translate(calc(-50% - 1em / 2), -50%);
+    box-shadow: 1em 1em 0 0 var(--primary-color);
+  }
+}
+
+
+@media (pointer: coarse) {
+  h1 a {
+    cursor: none;
+  }
+
+  h1 a:active {
+    color: var(--primary-bg-color);
+  }
+}
+
+div[role=article] p {
+  color: var(--secondary-color);
+}
+
+.author img {
+  width: 2em;
+  aspect-ratio: 1 / 1;
+}
+
+@media (max-width: 385px) {
+  main {
+    width: calc(100vw - var(--padding-main) * 2 - var(--box-shadow-main));
+  }
+}

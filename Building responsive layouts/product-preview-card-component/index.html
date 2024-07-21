@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Ankit Gond" />
+  <title>Product Preview Card Component</title>
+  <link rel="stylesheet" href="./static/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+
+    <img src="./images/image-product-desktop.jpg" alt="product image" class="desktop-img" />
+    <img src="./images/image-product-mobile.jpg" alt="product image" class="mobile-img" />
+
+    <div class="wrapper flex">
+
+      <p class="product-type">PERFUME</p>
+
+      <h1 class="product-title">Gabrielle Essence Eau De Parfum</h1>
+
+      <p class="product-details">A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+
+      <div class="product-price flex">
+        <h1 class="discounted-price">$149.99</h1>
+        <p class="original-price">$169.99</p>
+      </div>
+
+      <button type="button" class="cart flex">
+        <img src="./images/icon-cart.svg" alt="cart image" />
+        <span>Add to Cart</span>
+      </button>
+      
+    </div>
+    
+  </div>
+
+</body>
+</html>
