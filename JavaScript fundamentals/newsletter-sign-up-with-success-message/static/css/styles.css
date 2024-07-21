@@ -1,0 +1,218 @@
+:root {
+  --clr-primary-900: hsl(234, 29%, 20%);
+  --clr-primary-700: hsl(235, 18%, 26%);
+  --clr-primary-500: hsl(231, 7%, 60%);
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --clr-red-orange: color-mix(in srgb, red, orange);
+  --clr-red-orange-a: color-mix(in srgb, rgba(255, 0, 0, 0.2), rgba(255, 165, 0, 0.2));
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
+  color: var(--clr-primary-900);
+}
+
+.flex-c {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+main {
+  display: grid;
+  row-gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+main.new-page {
+  display: none;
+}
+
+main > *:not(picture) {
+  padding-inline: 1.5rem;
+}
+
+article {
+  gap: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+picture img {
+  display: block;
+  width: 100%;
+}
+
+ul {
+  padding-left: 2.5rem;
+  position: relative;
+  gap: 0.5rem
+}
+
+li::before {
+  content: url(../images/icon-list.svg);
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  left: 0;
+}
+
+small {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.error-message {
+  display: none;
+}
+
+#email {
+  padding: 0.875em;
+  margin-block: 0.5em 1em;
+  color: var(--clr-primary-700);
+  border-radius: 0.25rem;
+  border: 1px solid var(--clr-primary-500);
+}
+
+#email:active,
+#email:focus {
+  border: 1px solid var(--clr-primary-700);
+}
+
+button {
+  width: 100%;
+  padding-block: 0.875em;
+  font-weight: 700;
+  background-color: var(--clr-primary-900);
+  color: var(--clr-neutral-100);
+  border: none;
+  border-radius: 0.5em;
+}
+
+button:focus,
+button:active {
+  background-image: linear-gradient(to right, var(--clr-red-orange), orange);
+  box-shadow: 0 0.5rem 1rem var(--clr-primary-500);
+}
+
+@media (pointer: fine) {
+  button {
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-image: linear-gradient(to right, var(--clr-red-orange), orange);
+    box-shadow: 0 0.5rem 1rem var(--clr-primary-500);  
+  }
+}
+
+.success {
+  display: none;
+  padding: 2rem;
+  min-height: 100dvh;
+}
+
+.success.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+.success img {
+  margin-right: auto;
+  margin-top: auto;
+}
+
+.success button {
+  margin-top: auto;
+}
+
+.error .error-message {
+  display: inline;
+  color: var(--clr-red-orange);
+}
+
+.error #email {
+  background-color: var(--clr-red-orange-a);
+  color: var(--clr-red-orange);
+  border: 1px solid var(--clr-red-orange);
+}
+
+.error #email::placeholder {
+  color: var(--clr-red-orange);
+}
+
+@media (min-width: 601px) {
+  body {
+    background-color: var(--clr-primary-900);
+  }
+  
+  main {
+    grid-template-columns: 1fr 1fr;
+    padding: 0.875rem;
+    padding: 0;
+    background-color: var(--clr-neutral-100);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    border-radius: 1rem;
+  }
+
+  main > *:not(picture) {
+    padding-inline: 2.5rem;
+  }
+
+  article {
+    align-self: self-end;
+  }
+
+  form {
+    align-self: self-start;
+  }
+
+  picture {
+    grid-area: 1 / 2 / 3 / 3;
+    margin: 1rem;
+  }
+
+  .success.active {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--clr-neutral-100);
+    width: 500px;
+    min-height: auto;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 1rem;
+  }
+}
