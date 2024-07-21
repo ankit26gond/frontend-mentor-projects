@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Ankit Gond" />
+  <title>Newsletter Sign Up with Success Message</title>
+  <link rel="shortcut icon" href="static/images/favicon-32x32.png" type="image/x-icon" />
+  <link rel="stylesheet" href="static/css/styles.css" />
+  <script defer src="static/js/script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <main>
+
+    <picture>
+      <source media="(min-width: 601px)" srcset="static/images/illustration-sign-up-desktop.svg" />
+      <img src="static/images/illustration-sign-up-mobile.svg" alt="Sign Up" />
+    </picture>
+
+    <article class="flex-c">
+
+      <h1>Stay updated!</h1>
+
+      <p>Join 60,000+ product managers recieving monthly updates on:</p>
+
+      <ul class="flex-c">
+        <li>Product discovery and building what matters</li>
+        <li>Measuring to ensure updates are a success</li>
+        <li>And much more!</li>
+      </ul>
+      
+    </article>
+
+    <form class="input-area flex-c">
+
+      <small>
+        <label for="email">Email address</label>
+        <span class="error-message">Valid email required</span>
+      </small>
+
+      <input type="name" name="email" id="email" placeholder="email@company.com" />
+  
+      <button type="submit" id="submit">Subscribe to monthly newsletter</button>
+      
+    </form>
+    
+  </main>
+
+  <section class="success">
+
+    <img src="static/images/icon-success.svg" alt="Success" />
+    <h1>Thank for subscribing!</h1>
+    <p>A confirmation email has been sent to <b id="email-add">ash@loremcompany.com</b>. Please open it and click the button inside to confirm your subscription</p>
+
+    <button id="dismiss">Dismiss message</button>
+    
+  </section>
+  
+</body>
+</html>
