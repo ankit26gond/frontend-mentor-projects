@@ -20,8 +20,8 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Links
 
-- Solution URL: [URL](../qr-code-component/)
-- Live Site URL: [URL](#)
+- [Solution URL](../qr-code-component/)
+- [Live Site URL](#)
 
 ## My process
 
@@ -33,9 +33,9 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Useful resources
 
-- [Google Fonts](https://fonts.google.com/specimen/Outfit) - Google Font link for the Outfit Font.
+- [Outfit Font](https://fonts.google.com/specimen/Outfit) - Google Font link for the Outfit Font.
 
 ## Author
 
-- GitHub - [Ankit Gond](https://github.com/ankit26gond)
+- GitHub - [ankit26gond](https://github.com/ankit26gond)
 - Frontend Mentor [@ankit26gond](https://www.frontendmentor.io/profile/ankit26gond)
